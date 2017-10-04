@@ -51,7 +51,7 @@
     </ul>
   </div>
   <script>
-    $(function() {
+    (function() {
       $('#smallcatmenu .alicatmenu > li > a').click(
         function() {
           var p = $(this).parent('li');
@@ -68,7 +68,7 @@
           return false;
         }
       );
-    });
+    })();
   </script>
 
 </body>

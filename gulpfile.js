@@ -23,9 +23,10 @@ var gulp       = require('gulp'), // Подключаем Gulp
   	});
   });
 
-
   gulp.task('watch', ['browser-sync', 'scss' ], function() {
   	gulp.watch('src/scss/**/*.scss', ['scss']); // Наблюдение за sass файлами в папке sass
   	gulp.watch('src/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
   	gulp.watch('src/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
   });
+
+	
