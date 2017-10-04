@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body>
+  <div id="smallcatmenu">
+    <div class="alicatmenu_header"><a href="/" class="back"></a>Все категории</div>
+    <ul class="alicatmenu">
+      <li><a href="#">Сматфоны и аксессуары</a>
+        <ul>
+          <li><a href="/">Sony</a></li>
+          <li><a href="/">Xiaomi</a></li>
+          <li><a href="/">LG</a></li>
+          <li><a href="/">Apple</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Сматфоны и аксессуары</a>
+        <ul>
+          <li><a href="#">Sony</a></li>
+          <li><a href="#">Xiaomi</a></li>
+          <li><a href="#">LG</a></li>
+          <li><a href="#">Apple</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Сматфоны и аксессуары</a>
+        <ul>
+          <li><a href="#">Sony</a></li>
+          <li><a href="#">Xiaomi</a></li>
+          <li><a href="#">LG</a></li>
+          <li><a href="#">Apple</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Сматфоны и аксессуары</a>
+        <ul>
+          <li><a href="#">Sony</a></li>
+          <li><a href="#">Xiaomi</a></li>
+          <li><a href="#">LG</a></li>
+          <li><a href="#">Apple</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <script>
+    $(function() {
+      $('#smallcatmenu .alicatmenu > li > a').click(
+        function() {
+          var p = $(this).parent('li');
+          var c = $(this).next('ul');
+          if (!p.hasClass('open')) {
+            c.slideDown('fast', function() {
+              p.addClass('open');
+            });
+          } else {
+            c.slideUp('fast', function() {
+              p.removeClass('open');
+            });
+          }
+          return false;
+        }
+      );
+    });
+  </script>
+
+</body>
+</html>

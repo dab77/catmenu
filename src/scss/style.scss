@@ -1,0 +1,93 @@
+#smallcatmenu {
+  .alicatmenu_header {
+    padding: 10px;
+    position: relative;
+    color: #3b3f4a;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+
+    .back {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      margin-top: -8px;
+      background-image: url("../img/arrowleft.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: block;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .alicatmenu {
+    //  font-family: "Open Sans";
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+      text-decoration: none;
+      color: #3b3f4a;
+    }
+
+    > li {
+      display: block;
+      padding: 0;
+      font-size: 0;
+
+      > a {
+        display: block;
+        position: relative;
+        font-size: 14px;
+        padding: 10px;
+        border-bottom: 1px solid #dddddd;
+
+        &:after {
+          content: " ";
+          position: absolute;
+          background-image: url("../img/arrow.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          display: block;
+          transition: 0.3s;
+          width: 12px;
+          height: 7px;
+          right: 10px;
+          top: 50%;
+          margin-top: -3px;
+        }
+      }
+
+      &.open {
+        > a {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+
+        > ul {
+          display: block;
+        }
+      }
+
+      > ul {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        > li {
+          > a {
+            display: block;
+            font-size: 14px;
+            background-color: #f7f7f8;
+            padding: 10px 10px 10px 30px;
+            border-bottom: 1px solid #dddddd;
+          }
+        }
+      }
+    }
+  }
+}
